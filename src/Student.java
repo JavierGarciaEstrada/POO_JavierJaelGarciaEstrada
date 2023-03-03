@@ -5,7 +5,13 @@ public class Student {
     private String career;
     private int semester;
 
-
+    public Student(long controlNumber, String name, String lastName, String career, int semester) {
+        this.controlNumber = controlNumber;
+        this.name = name;
+        this.lastName = lastName;
+        this.career = career;
+        this.semester = semester;
+    }
 
     public long getControlNumber() {
         return controlNumber;
@@ -57,5 +63,14 @@ public class Student {
     public double subjectAvg(long controlNumber, String subject){
 
         return 0.0;
+    }
+    public String toString(){
+        System.out.println("Los datos del estudiante: ");
+        System.out.println("Nombre: " + this.name);
+        System.out.println("Apellidos: " + this.lastName);
+        System.out.println("Numero de control: " + this.controlNumber);
+        System.out.println("Carrera: " + this.career);
+        System.out.println("Semestre: " + this.semester);
+        return "";
     }
 }
